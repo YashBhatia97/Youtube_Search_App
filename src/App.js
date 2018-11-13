@@ -19,18 +19,21 @@ class App extends Component {
 
     };
 
-    this.videoSearch('Pokemon');
+    this.videoSearch('Prateek kuhad');
   }
 
   videoSearch(term) {
     YTSearch({key: API_KEY, term: term}, (data) => {
       console.log(data);
+      var myData = data.sort((a, b) => (a.snippet.publishedAt) < (b.snippet.publishedAt));
+
       this.setState({ 
-        videos: data,
+        videos: myData,
         selectedVideo: data[0]
       });
     });
   }
+
 
   render() {
     return (
