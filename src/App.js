@@ -8,19 +8,18 @@ const API_KEY = 'AIzaSyCx_f1nFUCtC0Rf8tqOKKiXvyfKXcag-0c';
 class App extends Component {
 
   constructor (props){
-    super (props);
+    
+    super(props);
 
-    this.state = {
-      videos: []
-    };
+    this.state = { videos: [] };
 
     this.videoSearch('React Tutorials');
   }
 
   videoSearch(term) {
-    YTSearch({ key: API_KEY, term: term }, (data) => {
-      //console.log(data);
-      this.setState({videos : data})
+    YTSearch({key: API_KEY, term: term}, (data) => {
+      console.log(data);
+      this.setState({ videos: data });
     });
   }
 
