@@ -11,32 +11,31 @@
 
 .button1-click {
 	background-color: white;
-	 -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
 	border-radius: 8px;
-	margin-left: 20px;
-	margin-right: 25px;
-	padding-left: 40px;
-	padding-right: 40px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 30%;
 }
-
 
 .button1-click:hover{
 	background-color: #98FB98; /* Green */
 }
+
 .button2-click:hover{
 	background-color: #98FB98; /* Green */
 }
-.button1-clicl:click{
-	background-color: #98FB98;
+.button1-click:active{
+	transform: translateY(4px);
+}
+
+.button2-click:active{
+	transform: translateY(4px);
 }
 
 .button2-click {
 	background-color: white;
 	border-radius: 8px;
-	margin-right: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
+	width:30%;
 }
 .search-bar{
 	margin: 30px;
@@ -44,7 +43,7 @@
 }
 
 .search-bar input{
-	width: 50%;
+	width: 60%;
 }
 
 .video-item img{

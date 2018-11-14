@@ -28,7 +28,9 @@ class App extends Component {
       data.sort((a,b) => {
         return a.snippet.title.toUpperCase() > b.snippet.title.toUpperCase()? 1:-1;
       });
-     
+      data.sort((a,b) => {
+        return a.snippet.publishedAt < b.snippet.publishedAt? 1:-1;
+      });
       this.setState({ 
         videos: data,
         selectedVideo: data[0]
