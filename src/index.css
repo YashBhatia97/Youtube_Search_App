@@ -1,10 +1,50 @@
+.heading-youtube {
+	text-align: right;
+	color: red;
+}
+
+.form-sort {
+	text-align: left;
+	margin-bottom: 10px;
+	border: black;
+}
+
+.button1-click {
+	background-color: white;
+	 -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border-radius: 8px;
+	margin-left: 20px;
+	margin-right: 25px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+
+.button1-click:hover{
+	background-color: #98FB98; /* Green */
+}
+.button2-click:hover{
+	background-color: #98FB98; /* Green */
+}
+.button1-clicl:click{
+	background-color: #98FB98;
+}
+
+.button2-click {
+	background-color: white;
+	border-radius: 8px;
+	margin-right: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 .search-bar{
 	margin: 30px;
-	text-align: center;
+	text-align: left;
 }
 
 .search-bar input{
-	width: 60%;
+	width: 50%;
 }
 
 .video-item img{

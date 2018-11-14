@@ -15,6 +15,7 @@ const VideoListItem = (props) => {
 				</div>
 				<div className="media-body">
 					<div className="media-heading"> {video.snippet.title} </div>
+					<div className="media-date"> Published on - {video.snippet.publishedAt.split('T')[0]} </div>
 				</div>
 			 </div>
 		</li>

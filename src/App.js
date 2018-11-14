@@ -35,13 +35,18 @@ class App extends Component {
       });
     });
   }
-
+  
 
   render() {
     return (
       <div>
+      <h4 className="col-md-3 heading-youtube" color="red"> My YouTube </h4>
       <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}/>
       <VideoDetail video= {this.state.selectedVideo} />
+      <form className="form-sort col-md-4">
+      <label> Sort By:- </label> 
+      <button type="button" className="button1-click"> Name </button>
+      <button type="button" className="button2-click"> Publish Date </button> </form>
       <VideoList 
       onVideoSelect={userSelected => this.setState({selectedVideo: userSelected})}
       videos={this.state.videos} />
