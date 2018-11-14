@@ -9,7 +9,7 @@ const API_KEY = 'AIzaSyCx_f1nFUCtC0Rf8tqOKKiXvyfKXcag-0c';
 class App extends Component {
 
   constructor (props){
-    
+
     super(props);
 
     this.state = { 
@@ -24,11 +24,13 @@ class App extends Component {
 
   videoSearch(term) {
     YTSearch({key: API_KEY, term: term}, (data) => {
-      console.log(data);
-      var myData = data.sort((a, b) => (a.snippet.publishedAt) < (b.snippet.publishedAt));
-
+      console.log(data);    
+      data.sort((a,b) => {
+        return a.snippet.title.toUpperCase() > b.snippet.title.toUpperCase()? 1:-1;
+      });
+     
       this.setState({ 
-        videos: myData,
+        videos: data,
         selectedVideo: data[0]
       });
     });
@@ -38,14 +40,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}/>
-        <VideoDetail video= {this.state.selectedVideo} />
-        <VideoList 
-          onVideoSelect={userSelected => this.setState({selectedVideo: userSelected})}
-          videos={this.state.videos} />
+      <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}/>
+      <VideoDetail video= {this.state.selectedVideo} />
+      <VideoList 
+      onVideoSelect={userSelected => this.setState({selectedVideo: userSelected})}
+      videos={this.state.videos} />
       </div>
-    );
+      );
+    }
   }
-}
 
-export default App;
+  export default App;
