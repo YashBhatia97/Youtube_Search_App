@@ -21,7 +21,7 @@ class App extends Component {
 
     };
 
-    this.videoSearch('Postman API');
+    this.videoSearch('Postman API services');
   }
 
   videoSearch(term) {
