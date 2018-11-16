@@ -9,7 +9,7 @@ MyYoutube-UI uses Youtube-Data-Api-v3 which provides a text-box for the user to 
 <img src="./Screenshot.png" width=35% height=35%/>
 
 ### Video Demo
-You can find the video demo here :- [Video Demo](https://drive.google.com/open?id=1TTBwsiCV6DMgGrgIy9_KwRTpPnQBzzaP)
+You can find the video demo here :- [Video Demo](https://youtu.be/VWpzR_xrvuQ)
 
 ### Steps to Run
  - Clone the repository
